@@ -476,9 +476,9 @@ document.getElementById("closestats").addEventListener("click", function () {
 
 //#region Statistics
 
-let tasks = ["Default Task"];
+let tasks = ["Default Task3"];
 
-let selectedTask = "Default Task";
+let selectedTask = "Default Task2";
 
 let taskContainer = document.getElementById("task-container");
 let filterContainer = document.getElementById("filters");
@@ -493,7 +493,7 @@ function loadTasks() {
 		tasks = JSON.parse(localStorage.getItem("pomo-tasks"));
 		if (!(tasks instanceof Array)) {
 			localStorage.removeItem("pomo-tasks");
-			tasks = ["Default Task"];
+			tasks = ["Default Task1"];
 		}
 	}
 	if (localStorage.getItem("pomo-records")) {
