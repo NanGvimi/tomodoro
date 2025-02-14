@@ -224,54 +224,54 @@
 		</div>
 		<div id="statistics" class="scrollbar">
 			<div class="menu-title">
-				Statistics
+				统计数据
 				<button id="closestats" class="crossbtn" title="Close Statistics"></button>
 			</div>
 			<div class="content">
 				<div class="setting">
-					<h3>Show Statistics of:</h3>
+					<h3>显示以下数据的统计信息：</h3>
 					<div id="filters" class="scrollbar">
 						<label class="task-chip">
 							<input type="checkbox" id="all" checked />
-							<span class="chip-task-name">All Tasks</span>
+							<span class="chip-task-name">所有任务</span>
 						</label>
 					</div>
 				</div>
 				<div class="setting">
-					<label for="stat-time-select">Time Period: </label>
+					<label for="stat-time-select">时间段：</label>
 					<select id="stat-time-select">
-						<option value="0">Today</option>
-						<option value="1">Past Day</option>
-						<option value="7" selected>Past Week</option>
-						<option value="365">Past Year</option>
-						<option value="all">All Time</option>
+						<option value="0">今天</option>
+						<option value="1">过去一天</option>
+						<option value="7" selected>过去一周</option>
+						<option value="365">过去一年</option>
+						<option value="all">所有时间</option>
 					</select>
 				</div>
 				<br /><br />
-				<h2>Overview</h2>
+				<h2>概述</h2>
 				<div id="stat-summary" class="remark">
-					You focused for a total duration of
+					您集中注意力的总持续时间为
 					<span id="stat-summary-total"></span>
-					consisting of
+					包括
 					<span id="stat-summary-rounds"></span>
-					Focus Rounds with an average round duration of
+					专注回合，平均回合持续时间为
 					<span id="stat-summary-average"></span>
 					<br /><br />
-					Shortest round duration: <span id="stat-summary-shortest"></span>
+					最短一轮持续时间： <span id="stat-summary-shortest"></span>
 					<br />
-					Longest round duration: <span id="stat-summary-longest"></span>
+					最长一轮持续时间： <span id="stat-summary-longest"></span>
 				</div>
-				<h2>Time Distribution:</h2>
+				<h2>时间分配：</h2>
 				<div id="pie-container">
 					<div id="pie">
 						<svg viewbox="0 0 120 120"></svg>
 					</div>
 					<div id="pie-card-container" class="scrollbar"></div>
 				</div>
-				<h2>Time Spent per Task:</h2>
+				<h2>每项任务花费的时间：</h2>
 				<div id="timespent" class="stat-chart scrollbar"></div>
 				<br /><br />
-				<h2>Time Spent per 6 Hours:</h2>
+				<h2>每 6 小时花费的时间：</h2>
 				<div id="timesixhourly" class="stat-chart scrollbar">
 					<div class="task-bar-container">
 						<div class="legend">00:00 - 06:00</div>
@@ -307,12 +307,12 @@
 					</div>
 				</div>
 				<div id="remark-hourly" class="remark">
-					You were most productive between <span class="remark-value"></span>
+					你的工作效率最高的时间段是 <span class="remark-value"></span>
 				</div>
-				<h2>Time Spent per Day:</h2>
+				<h2>每天花费的时间：</h2>
 				<div id="timedaily" class="stat-chart scrollbar">
 					<div class="task-bar-container">
-						<div class="legend">Monday</div>
+						<div class="legend">周一</div>
 						<div class="bar-container">
 							<div class="bar" id="day-monday">
 								<div class="stat-value">21:11</div>
@@ -320,7 +320,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">Tuesday</div>
+						<div class="legend">周二</div>
 						<div class="bar-container">
 							<div class="bar" id="day-tuesday">
 								<div class="stat-value">21:11</div>
@@ -328,7 +328,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">Wednesday</div>
+						<div class="legend">周三</div>
 						<div class="bar-container">
 							<div class="bar" id="day-wednesday">
 								<div class="stat-value">21:11</div>
@@ -336,7 +336,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">Thursday</div>
+						<div class="legend">周四</div>
 						<div class="bar-container">
 							<div class="bar" id="day-thursday">
 								<div class="stat-value">21:11</div>
@@ -344,7 +344,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">Friday</div>
+						<div class="legend">周五</div>
 						<div class="bar-container">
 							<div class="bar" id="day-friday">
 								<div class="stat-value">21:11</div>
@@ -352,7 +352,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">Saturday</div>
+						<div class="legend">周六</div>
 						<div class="bar-container">
 							<div class="bar" id="day-saturday">
 								<div class="stat-value">21:11</div>
@@ -360,7 +360,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">Sunday</div>
+						<div class="legend">周日</div>
 						<div class="bar-container">
 							<div class="bar" id="day-sunday">
 								<div class="stat-value">21:11</div>
@@ -369,12 +369,12 @@
 					</div>
 				</div>
 				<div id="remark-daily" class="remark">
-					You were most productive on <span class="remark-value"></span>
+					您在以下方面的工作效率最高 <span class="remark-value"></span>
 				</div>
-				<h2>Time Spent per Month:</h2>
+				<h2>每月花费的时间：</h2>
 				<div id="timemonthly" class="stat-chart scrollbar">
 					<div class="task-bar-container">
-						<div class="legend">January</div>
+						<div class="legend">一月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-january">
 								<div class="stat-value">21:11</div>
@@ -382,7 +382,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">February</div>
+						<div class="legend">二月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-february">
 								<div class="stat-value">21:11</div>
@@ -390,7 +390,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">March</div>
+						<div class="legend">三月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-march">
 								<div class="stat-value">21:11</div>
@@ -398,7 +398,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">April</div>
+						<div class="legend">四月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-april">
 								<div class="stat-value">21:11</div>
@@ -406,7 +406,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">May</div>
+						<div class="legend">五月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-may">
 								<div class="stat-value">21:11</div>
@@ -414,7 +414,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">June</div>
+						<div class="legend">六月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-june">
 								<div class="stat-value">21:11</div>
@@ -422,7 +422,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">July</div>
+						<div class="legend">七月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-july">
 								<div class="stat-value">21:11</div>
@@ -430,7 +430,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">August</div>
+						<div class="legend">八月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-august">
 								<div class="stat-value">21:11</div>
@@ -438,7 +438,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">September</div>
+						<div class="legend">九月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-september">
 								<div class="stat-value">21:11</div>
@@ -446,7 +446,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">October</div>
+						<div class="legend">十月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-october">
 								<div class="stat-value">21:11</div>
@@ -454,7 +454,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">November</div>
+						<div class="legend">十一月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-november">
 								<div class="stat-value">21:11</div>
@@ -462,7 +462,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">December</div>
+						<div class="legend">十二月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-december">
 								<div class="stat-value">21:11</div>
@@ -471,22 +471,22 @@
 					</div>
 				</div>
 				<div id="remark-monthly" class="remark">
-					You were most productive in <span class="remark-value"></span>
+					您在以下方面最有成效  <span class="remark-value"></span>
 				</div>
 				<details id="stat-details">
-					<summary><h2>Focus Round Records</h2></summary>
+					<summary><h2>聚焦轮次记录</h2></summary>
 					<div id="round-entries"></div>
 				</details>
 			</div>
 		</div>
 		<div id="managetasks" class="scrollbar">
 			<div class="menu-title">
-				Tasks
+				任务
 				<button id="closetasks" class="crossbtn" title="Return to main screen"></button>
 			</div>
 			<div class="content">
-				<h2>Your Tasks</h2>
-				Here you can manage your tasks.
+				<h2>您的任务</h2>
+				您可以在此管理您的任务。
 				<br /><br />
 				<div id="task-container"></div>
 				<form id="newtask" class="task">
