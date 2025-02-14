@@ -45,9 +45,9 @@
 				<div id="time"></div>
 
 				<div id="status">
-					<span id="s-focus">聚焦</span>
-					<span id="s-short">短暂休息</span>
-					<span id="s-long">长时间休息</span>
+					<span id="s-focus">专注</span>
+					<span id="s-short">小憩</span>
+					<span id="s-long">阶段休息</span>
 				</div>
 				<button id="pauseplay" class="paused" title="Start Timer">
 					<svg id="playing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
@@ -104,7 +104,7 @@
 				<section class="section">
 					<h2>计时器</h2>
 					<div class="setting">
-						<label for="focus-input">聚焦： <span></span></label>
+						<label for="focus-input">专注： <span></span></label>
 						<div class="input-holder">
 							<button class="ibtn" id="focus-dec">-</button>
 							<input type="number" name="focus-input" id="focus-input" min="1" max="180" />
@@ -113,7 +113,7 @@
 						</div>
 					</div>
 					<div class="setting">
-						<label for="short-input">短暂休息： <span></span></label>
+						<label for="short-input">小憩： <span></span></label>
 						<div class="input-holder">
 							<button class="ibtn" id="short-dec">-</button>
 							<input type="number" name="short-input" id="short-input" min="1" max="180" />
@@ -122,7 +122,7 @@
 						</div>
 					</div>
 					<div class="setting">
-						<label for="long-input">长时间休息： <span></span></label>
+						<label for="long-input">阶段性休息： <span></span></label>
 						<div class="input-holder">
 							<button class="ibtn" id="long-dec">-</button>
 							<input type="number" name="long-input" id="long-input" min="1" max="180" />
@@ -131,14 +131,14 @@
 						</div>
 					</div>
 					<div class="setting">
-						<label for="rounds-input">轮次</label>
+						<label for="rounds-input">周期</label>
 						<br />
-						长休息时间之间的集中会议次数。
+						阶段性休息之间的专注次数。
 						<div class="input-holder">
 							<button class="ibtn" id="rounds-dec">-</button>
 							<input type="number" name="rounds-input" id="rounds-input" min="1" max="18" />
 							<button class="ibtn" id="rounds-inc">+</button>
-							轮次
+							周期
 						</div>
 					</div>
 				</section>
@@ -147,14 +147,14 @@
 					<div class="setting">
 						<label for="theme-select">主题：</label>
 						<select name="theme" id="theme-select" title="Theme">
-							<option value="dark" id="t-dark" selected>深色</option>
+							<option value="dark" id="t-dark" selected>夜间</option>
 							<option value="black" id="t-black">黑色</option>
-							<option value="light" id="t-light">亮色</option>
+							<option value="light" id="t-light">日间</option>
 							<option value="white" id="t-white">白色</option>
 						</select>
 					</div>
 					<div class="setting" id="accents">
-						<h3>强调色：</h3>
+						<h3>主配色：</h3>
 						<div id="colors"></div>
 					</div>
 				</section>
@@ -164,20 +164,20 @@
 						<label for="notif-select">通知：</label>
 						<select name="notif" id="notif-select" title="Notification Type">
 							<option value="enabled">启用</option>
-							<option value="silent">无声</option>
+							<option value="silent">静默</option>
 							<option value="disabled">禁用</option>
 						</select>
 						<br /><br />
 						确保您的浏览器允许来自本网站的通知。
 					</div>
 					<div class="setting">
-						<label for="audio-select">白噪声：</label>
+						<label for="audio-select">白噪音：</label>
 						<select name="audio" id="audio-select" title="Notification Type">
 							<option value="disabled" selected>禁用</option>
 							<option value="noise">启用</option>
 						</select>
 						<br /><br />
-						如果启用，聚焦会话期间将播放白噪音。请确保您的浏览器允许本网站发出声音。
+						如果启用，专注期间将播放白噪音。请确保您的浏览器允许本网站发出声音。
 					</div>
 				</section>
 				<section class="section">
@@ -199,7 +199,16 @@
 						class="button-link hover-shadow"
 					>
 						<img alt="GitHub" src="./GitHub-Mark-64px.png" />
-						在 GitHub 上查看
+						在 GitHub 上查看原作者
+					</a>
+					<a
+						href="https://github.com/NanGvimi/tomodoro"
+						id="github-link"
+						target="_blank"
+						class="button-link hover-shadow"
+					>
+						<img alt="GitHub" src="./GitHub-Mark-64px.png" />
+						在 GitHub 上查看汉化版本
 					</a>
 					<a href="https://ko-fi.com/Z8Z6E84CZ" target="_blank" id="kofi-link">
 						<img
@@ -211,14 +220,14 @@
 					</a>
 				</section>
 				<section class="section">
-					<h2>关于 PIP 模式</h2>
-					Tomodoro 支持 “始终在顶部 ”模式，即 “画中画 ”模式，可直接在浏览器中使用，无需安装任何电子 app。<br />
+					<h2>关于 PIP 模式（画中画模式）</h2>
+					Tomodoro 支持 “始终在顶部” 模式，即 “画中画” 模式，可直接在浏览器中使用，无需安装任何客户端。<br />
 					基于 Chromium 的浏览器支持 PIP 模式（已在 Chrome 和 Edge 上测试）。<br />
 					Safari 浏览器尚未测试，但可能可以使用。<br />
-					在桌面版火狐浏览器上，PIP 按钮只会让视频可见，但不会激活 PIP。要切换到 PIP 模式，请右键单击视频并选择 “在画中画模式下观看”。
+					在桌面版火狐浏览器上，PIP 按钮只会让视频可见，但不会激活画中画。要切换到 PIP 模式，请右键单击视频并选择 “在画中画模式下观看”。
 					<br /><br /><br />
 					<h2>安卓版 Chrome 浏览器上的 PIP 模式</h2>
-					如果您使用的是 Android 版 Chrome 浏览器，那么 PIP 按钮将使视频元素可见。要切换到 PIP 模式，请将视频设为全屏，然后转到设备的主屏幕（按主屏幕按钮或使用导航手势）而不退出全屏。PIP 模式将被激活。
+					如果您使用的是 Android 版 Chrome 浏览器，那么 PIP 按钮将使视频元素可见。要切换到画中画模式，请将视频设为全屏，然后回到设备的主屏幕（按主屏幕按钮或使用导航手势）而不退出全屏。画中画模式将被激活。
 				</section>
 			</div>
 		</div>
@@ -229,7 +238,7 @@
 			</div>
 			<div class="content">
 				<div class="setting">
-					<h3>显示以下数据的统计信息：</h3>
+					<h3>显示以下任务的统计信息：</h3>
 					<div id="filters" class="scrollbar">
 						<label class="task-chip">
 							<input type="checkbox" id="all" checked />
@@ -250,16 +259,16 @@
 				<br /><br />
 				<h2>概述</h2>
 				<div id="stat-summary" class="remark">
-					您集中注意力的总持续时间为
+					您专注的总计时间为
 					<span id="stat-summary-total"></span>
 					包括
 					<span id="stat-summary-rounds"></span>
-					专注回合，平均回合持续时间为
+					个专注回合，平均专注持续时间为
 					<span id="stat-summary-average"></span>
 					<br /><br />
-					最短一轮持续时间： <span id="stat-summary-shortest"></span>
+					最短一轮专注时间： <span id="stat-summary-shortest"></span>
 					<br />
-					最长一轮持续时间： <span id="stat-summary-longest"></span>
+					最长一轮专注时间： <span id="stat-summary-longest"></span>
 				</div>
 				<h2>时间分配：</h2>
 				<div id="pie-container">
@@ -271,7 +280,7 @@
 				<h2>每项任务花费的时间：</h2>
 				<div id="timespent" class="stat-chart scrollbar"></div>
 				<br /><br />
-				<h2>每 6 小时花费的时间：</h2>
+				<h2>每隔 6 小时花费的时间：</h2>
 				<div id="timesixhourly" class="stat-chart scrollbar">
 					<div class="task-bar-container">
 						<div class="legend">00:00 - 06:00</div>
@@ -307,7 +316,7 @@
 					</div>
 				</div>
 				<div id="remark-hourly" class="remark">
-					你的工作效率最高的时间段是 <span class="remark-value"></span>
+					您工作效率最高的时间段是 <span class="remark-value"></span>
 				</div>
 				<h2>每天花费的时间：</h2>
 				<div id="timedaily" class="stat-chart scrollbar">
@@ -369,7 +378,7 @@
 					</div>
 				</div>
 				<div id="remark-daily" class="remark">
-					您在以下方面的工作效率最高 <span class="remark-value"></span>
+					您在该日的工作效率最高： <span class="remark-value"></span>
 				</div>
 				<h2>每月花费的时间：</h2>
 				<div id="timemonthly" class="stat-chart scrollbar">
@@ -471,10 +480,10 @@
 					</div>
 				</div>
 				<div id="remark-monthly" class="remark">
-					您在以下方面最有成效  <span class="remark-value"></span>
+					您在该月最有成效： <span class="remark-value"></span>
 				</div>
 				<details id="stat-details">
-					<summary><h2>聚焦轮次记录</h2></summary>
+					<summary><h2>专注回合记录</h2></summary>
 					<div id="round-entries"></div>
 				</details>
 			</div>
@@ -505,14 +514,14 @@
 		<div id="firstload">
 			<div id="firstloadcontent">
 				<h2>Tomodoro</h2>
-				Tomodoro 是一款开源 Pomodoro 网络应用程序，具有 PIP 模式、白噪声、任务、统计和离线支持等超酷功能。
+				Tomodoro 是一款开源番茄钟网络应用程序，具有画中画模式、白噪声、任务、统计和离线支持等超酷功能。
 				<br /><br /><br />
 				<h2>新功能</h2>
 				<ul id="new-list">
 					<li>
 						<h3>任务与统计</h3>
 						<div class="whats-new-desc">
-							你现在可以创建任务，并跟踪专注于这些任务所花费的时间。所有数据都存储在浏览器中。
+							你现在可以创建多个任务，并跟踪专注于这些任务所花费的时间。所有数据都存储在浏览器中。
 						</div>
 					</li>
 					<li>
@@ -521,14 +530,14 @@
 					</li>
 				</ul>
 				<br /><br />
-				<h2>关于 PIP 模式</h2>
-				Tomodoro 支持 “始终在顶部 ”模式，即 “画中画 ”模式，可直接在浏览器中使用，无需安装任何电子应用程序。<br />
+				<h2>关于 PIP 模式（画中画模式）</h2>
+				Tomodoro 支持 “始终在顶部” 模式，即 “画中画” 模式，可直接在浏览器中使用，无需安装任何客户端。<br />
 				基于 Chromium 的浏览器支持 PIP 模式（已在 Chrome 和 Edge 上测试）。<br />
 				Safari 浏览器尚未测试，但可能可以使用。<br />
-				在桌面版火狐浏览器上，PIP 按钮只会让视频可见，但不会激活 PIP。要切换到 PIP 模式，请右键单击视频并选择 “在画中画模式下观看”。
+				在桌面版火狐浏览器上，PIP 按钮只会让视频可见，但不会激活画中画。要切换到 PIP 模式，请右键单击视频并选择 “在画中画模式下观看”。
 				<br /><br /><br />
 				<h2>安卓版 Chrome 浏览器上的 PIP 模式</h2>
-				如果您使用的是 Android 版 Chrome 浏览器，那么 PIP 按钮将使视频元素可见。要切换到 PIP 模式，请将视频设为全屏，然后转到设备的主屏幕（按主屏幕按钮或使用导航手势）而不退出全屏。PIP 模式将被激活。
+					如果您使用的是 Android 版 Chrome 浏览器，那么 PIP 按钮将使视频元素可见。要切换到画中画模式，请将视频设为全屏，然后回到设备的主屏幕（按主屏幕按钮或使用导航手势）而不退出全屏。画中画模式将被激活。
 			</div>
 			<button id="closeintro" class="hover-shadow">让我们开始吧！</button>
 		</div>
