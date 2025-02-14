@@ -476,9 +476,9 @@ document.getElementById("closestats").addEventListener("click", function () {
 
 //#region Statistics
 
-let tasks = ["Default Task3"];
+let tasks = ["默认任务"];
 
-let selectedTask = "Default Task2";
+let selectedTask = "Default Task";
 
 let taskContainer = document.getElementById("task-container");
 let filterContainer = document.getElementById("filters");
@@ -493,7 +493,7 @@ function loadTasks() {
 		tasks = JSON.parse(localStorage.getItem("pomo-tasks"));
 		if (!(tasks instanceof Array)) {
 			localStorage.removeItem("pomo-tasks");
-			tasks = ["Default Task1"];
+			tasks = ["Default Task"];
 		}
 	}
 	if (localStorage.getItem("pomo-records")) {
@@ -825,7 +825,7 @@ function pieCardGenerator(task) {
 	el.appendChild(pieName);
 	let timeHolder = document.createElement("div");
 	let text = document.createElement("span");
-	text.innerText = "Time Spent: ";
+	text.innerText = "Time Spent1你: ";
 	let timeSpan = document.createElement("span");
 	timeSpan.className = "pie-card-time";
 	let ee = document.createElement("div");
@@ -837,7 +837,7 @@ function pieCardGenerator(task) {
 	roundno.className = "pie-card-rounds";
 	let roundnospan = document.createElement("span");
 	roundnospan.className = "pie-card-rounds-span";
-	roundno.append(document.createTextNode("Number of Rounds: "), roundnospan);
+	roundno.append(document.createTextNode("Number of Rounds2我: "), roundnospan);
 	timeHolder.append(text, timeSpan, ee, roundno);
 	el.appendChild(timeHolder);
 	return el;
